@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     
-    <!-- خطوط Google Fonts الاحترافية -->
+    <!-- خطوط Google Fonts الاحترافية (الأناقة الهندسية) -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     
-    <!-- مكتبة الأنيميشن المباشرة الرسمية AOS (CSS) في الهيد لضمان التحميل المبكر -->
+    <!-- مكتبة الأنيميشن AOS (CSS) -->
     <link rel="stylesheet" href="https://cloudflare.com" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYKUbXnFYE1B/35fXSmcGoajWZ63wHz92lGexO9A6U06Gw7Rn2RD3PMtLQBh56+60w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
-      /* إعدادات المصنع والخط والمسافات */
+      /* إعادة ضبط المصنع لتتناسب مع النمط الداكن لثيم Midnight */
       * {
         box-sizing: border-box;
         margin: 0;
@@ -24,35 +24,38 @@
       body {
         padding-top: 80px; 
         font-family: 'Montserrat', sans-serif;
-        color: #2c3e50;
+        color: #e0e6ed; /* لون نص فاتح ومريح في الخلفيات الداكنة */
         line-height: 1.8;
-        background-color: #fafafa;
+        background-color: #0f172a; /* خلفية داكنة فاخرة مأخوذة من روح Midnight */
         overflow-x: hidden;
       }
 
-      /* شريط التنقل العلوي المثبت بثبات */
+      /* شريط التنقل العلوي الأنيق المتوافق مع Midnight */
       .nav-bar {
         position: fixed;
         top: 0; left: 0; right: 0;
         width: 100%;
-        background: #159957; 
+        background: rgba(15, 23, 42, 0.9); /* شفافية بسيطة تعطي طابعاً زجاجياً فاخراً */
+        backdrop-filter: blur(10px); /* تأثير ضبابي خلف الشريط */
         z-index: 1000; 
         padding: 18px 60px; 
         display: flex; 
         justify-content: space-between; 
         align-items: center; 
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
       }
 
       .nav-bar .logo {
         font-weight: 700;
         font-size: 1.4rem;
-        color: white;
+        color: #00d2ff; /* لون أزرق نيون متوهج للاسم ليتوافق مع Midnight */
         letter-spacing: 0.5px;
+        text-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
       }
 
       .nav-links a { 
-        color: rgba(255, 255, 255, 0.9); 
+        color: rgba(255, 255, 255, 0.8); 
         margin-left: 25px; 
         text-decoration: none; 
         font-weight: 500; 
@@ -61,23 +64,25 @@
       }
       
       .nav-links a:hover { 
-        color: #ffffff;
-        text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        color: #00d2ff;
+        text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
       }
       
-      /* حاوية المحتوى المريحة للتنفس والانتشار */
+      /* الحاوية الرئيسية للمحتوى */
       .main-content {
         max-width: 950px;
         margin: 50px auto;
         padding: 0 40px;
       }
 
+      /* تنسيق العناوين والفقرات بنمط Midnight */
       h1, h2, h3 {
-        color: #159957;
+        color: #00d2ff; /* جميع العناوين بلون النيون اللامع للثيم الجديد */
         font-weight: 700;
         margin-bottom: 20px;
         margin-top: 40px;
         letter-spacing: -0.5px;
+        text-shadow: 0 0 8px rgba(0, 210, 255, 0.2);
       }
 
       p {
@@ -85,37 +90,57 @@
         font-weight: 400;
         font-size: 1.05rem;
         text-align: justify;
-        color: #4a5568;
+        color: #cbd5e1; /* لون رمادي فاتح مريح للقراءة في الوضع الداكن */
       }
 
       strong {
-        color: #1e603d;
+        color: #00f2fe;
         font-weight: 600;
       }
+
+      /* تنسيق الأزرار الافتراضية بنمط الـ Midnight */
+      .btn {
+        background: linear-gradient(135deg, #0072ff, #00d2ff);
+        color: white !important;
+        padding: 12px 28px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
+      }
       
-      /* الفوتر الموحد */
+      /* الفوتر الموحد بنمط داكن مكمل للثيم */
       .site-footer { 
-        background: #ffffff; 
+        background: #0b0f19; 
         padding: 40px 20px; 
         text-align: center; 
-        border-top: 1px solid #eef2f5;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
         width: 100%;
         margin-top: 80px;
       }
       
       .footer-links a { 
         margin: 0 15px; 
-        color: #159957; 
+        color: #00d2ff; 
         font-weight: 500; 
         text-decoration: none;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease;
       }
-      .footer-links a:hover { color: #1e603d; }
+      .footer-links a:hover { 
+        color: #ffffff;
+        text-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
+      }
     </style>
   </head>
   <body>
 
-    <!-- شريط التنقل -->
     <nav class="nav-bar">
       <div class="logo">Mostafa Khamis</div>
       <div class="nav-links">
@@ -126,10 +151,8 @@
       </div>
     </nav>
 
-    <!-- حقن محتويات الصفحات التلقائي -->
     {{ content }}
 
-    <!-- الفوتر الموحد لجميع الصفحات -->
     <footer class="site-footer">
       <div class="footer-links">
         <a href="#" target="_blank">LinkedIn</a>
@@ -137,14 +160,13 @@
         <a href="#" target="_blank">Freelancer</a>
         <a href="#" target="_blank">Upwork</a>
       </div>
-      <p style="margin-top:20px; font-size: 0.9rem; color: #7f8c8d;">&copy; 2026 Mostafa Khamis. Professional Web & Data Solutions.</p>
+      <p style="margin-top:20px; font-size: 0.9rem; color: #64748b;">&copy; 2026 Mostafa Khamis. Professional Cyber & Web Architect.</p>
     </footer>
 
-    <!-- ملف جافا سكريبت المباشر المحدث لـ AOS بآخر إصدار مستقر وموثوق من الـ CDN العالمي -->
+    <!-- جافا سكريبت لتفعيل مكتبة الأنيميشن الشاملة والتلقائية في كل الصفحات -->
     <script src="https://cloudflare.com" integrity="sha512-A7AYk1fGKX6S2SsHyvkv96C732co95FZL70w24mbFFZ7CRKkYwM24TO2xminBlvTRkB8SSOCTSpam886329MSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script>
-      // ننتظر تحميل كامل عناصر وعناوين الصفحة وملف السكربت لتفعيل الأنيميشن بثبات
       window.onload = function() {
         if (typeof AOS !== 'undefined') {
           AOS.init({ 
@@ -152,7 +174,6 @@
             once: false,     
             mirror: true    
           });
-          // تنشيط وإعادة تهيئة إجبارية للمتصفح لحساب الارتفاعات
           AOS.refresh();
         }
       };
