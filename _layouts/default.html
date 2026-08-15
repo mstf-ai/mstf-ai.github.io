@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    
+    <!-- خطوط Google Fonts الاحترافية -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- مكتبة الأنيميشن المباشرة الرسمية AOS (CSS) في الهيد لضمان التحميل المبكر -->
+    <link rel="stylesheet" href="https://cloudflare.com" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYKUbXnFYE1B/35fXSmcGoajWZ63wHz92lGexO9A6U06Gw7Rn2RD3PMtLQBh56+60w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+      /* إعدادات المصنع والخط والمسافات */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        padding-top: 80px; 
+        font-family: 'Montserrat', sans-serif;
+        color: #2c3e50;
+        line-height: 1.8;
+        background-color: #fafafa;
+        overflow-x: hidden;
+      }
+
+      /* شريط التنقل العلوي المثبت بثبات */
+      .nav-bar {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        width: 100%;
+        background: #159957; 
+        z-index: 1000; 
+        padding: 18px 60px; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      }
+
+      .nav-bar .logo {
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: white;
+        letter-spacing: 0.5px;
+      }
+
+      .nav-links a { 
+        color: rgba(255, 255, 255, 0.9); 
+        margin-left: 25px; 
+        text-decoration: none; 
+        font-weight: 500; 
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-links a:hover { 
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(255,255,255,0.3);
+      }
+      
+      /* حاوية المحتوى المريحة للتنفس والانتشار */
+      .main-content {
+        max-width: 950px;
+        margin: 50px auto;
+        padding: 0 40px;
+      }
+
+      h1, h2, h3 {
+        color: #159957;
+        font-weight: 700;
+        margin-bottom: 20px;
+        margin-top: 40px;
+        letter-spacing: -0.5px;
+      }
+
+      p {
+        margin-bottom: 25px;
+        font-weight: 400;
+        font-size: 1.05rem;
+        text-align: justify;
+        color: #4a5568;
+      }
+
+      strong {
+        color: #1e603d;
+        font-weight: 600;
+      }
+      
+      /* الفوتر الموحد */
+      .site-footer { 
+        background: #ffffff; 
+        padding: 40px 20px; 
+        text-align: center; 
+        border-top: 1px solid #eef2f5;
+        width: 100%;
+        margin-top: 80px;
+      }
+      
+      .footer-links a { 
+        margin: 0 15px; 
+        color: #159957; 
+        font-weight: 500; 
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .footer-links a:hover { color: #1e603d; }
+    </style>
+  </head>
+  <body>
+
+    <!-- شريط التنقل -->
+    <nav class="nav-bar">
+      <div class="logo">Mostafa Khamis</div>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/about">About Me</a>
+        <a href="/certificates">Certificates</a>
+      </div>
+    </nav>
+
+    <!-- حقن محتويات الصفحات التلقائي -->
+    {{ content }}
+
+    <!-- الفوتر الموحد لجميع الصفحات -->
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">Freelancer</a>
+        <a href="#" target="_blank">Upwork</a>
+      </div>
+      <p style="margin-top:20px; font-size: 0.9rem; color: #7f8c8d;">&copy; 2026 Mostafa Khamis. Professional Web & Data Solutions.</p>
+    </footer>
+
+    <!-- ملف جافا سكريبت المباشر المحدث لـ AOS بآخر إصدار مستقر وموثوق من الـ CDN العالمي -->
+    <script src="https://cloudflare.com" integrity="sha512-A7AYk1fGKX6S2SsHyvkv96C732co95FZL70w24mbFFZ7CRKkYwM24TO2xminBlvTRkB8SSOCTSpam886329MSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+      // ننتظر تحميل كامل عناصر وعناوين الصفحة وملف السكربت لتفعيل الأنيميشن بثبات
+      window.onload = function() {
+        if (typeof AOS !== 'undefined') {
+          AOS.init({ 
+            duration: 1000, 
+            once: false,     
+            mirror: true    
+          });
+          // تنشيط وإعادة تهيئة إجبارية للمتصفح لحساب الارتفاعات
+          AOS.refresh();
+        }
+      };
+    </script>
+  </body>
+</html>
