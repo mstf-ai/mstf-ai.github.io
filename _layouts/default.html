@@ -5,16 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     
-    <!-- خطوط Google Fonts الاحترافية (الأناقة الهندسية) -->
+    <!-- خطوط Google Fonts (الأناقة الهندسية) -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     
-    <!-- مكتبة الأنيميشن AOS (CSS) -->
+    <!-- مكتبة الأنيميشن AOS -->
     <link rel="stylesheet" href="https://cloudflare.com" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYKUbXnFYE1B/35fXSmcGoajWZ63wHz92lGexO9A6U06Gw7Rn2RD3PMtLQBh56+60w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
-      /* إعادة ضبط المصنع لتتناسب مع النمط الداكن لثيم Midnight */
+      /* تأثير الطفو الفضائي السحري الموحد */
+      @keyframes neonFloat {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+
+      /* تطبيق تأثير الطفو عبر كلاس مخصص يمكن استخدامه في أي مكان */
+      .magical-float {
+        animation: neonFloat 5s ease-in-out infinite;
+      }
+
       * {
         box-sizing: border-box;
         margin: 0;
@@ -23,39 +34,39 @@
 
       body {
         padding-top: 80px; 
-        font-family: 'Montserrat', sans-serif;
-        color: #e0e6ed; /* لون نص فاتح ومريح في الخلفيات الداكنة */
+        font-family: 'Montserrat', sans-serif !important;
+        color: #e0e6ed !important;
         line-height: 1.8;
-        background-color: #0f172a; /* خلفية داكنة فاخرة مأخوذة من روح Midnight */
+        background-color: #0f172a !important; /* إجبار الخلفية الداكنة الفاخرة */
         overflow-x: hidden;
       }
 
-      /* شريط التنقل العلوي الأنيق المتوافق مع Midnight */
+      /* شريط التنقل الزجاجي الاحترافي لـ Midnight */
       .nav-bar {
         position: fixed;
         top: 0; left: 0; right: 0;
         width: 100%;
-        background: rgba(15, 23, 42, 0.9); /* شفافية بسيطة تعطي طابعاً زجاجياً فاخراً */
-        backdrop-filter: blur(10px); /* تأثير ضبابي خلف الشريط */
+        background: rgba(15, 23, 42, 0.95) !important; 
+        backdrop-filter: blur(12px);
         z-index: 1000; 
         padding: 18px 60px; 
         display: flex; 
         justify-content: space-between; 
         align-items: center; 
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        border-bottom: 1px solid rgba(0, 210, 255, 0.15) !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
       }
 
       .nav-bar .logo {
         font-weight: 700;
         font-size: 1.4rem;
-        color: #00d2ff; /* لون أزرق نيون متوهج للاسم ليتوافق مع Midnight */
+        color: #00d2ff !important; /* إجبار الأزرق النيون */
         letter-spacing: 0.5px;
-        text-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+        text-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
       }
 
       .nav-links a { 
-        color: rgba(255, 255, 255, 0.8); 
+        color: rgba(255, 255, 255, 0.8) !important; 
         margin-left: 25px; 
         text-decoration: none; 
         font-weight: 500; 
@@ -64,43 +75,42 @@
       }
       
       .nav-links a:hover { 
-        color: #00d2ff;
-        text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+        color: #00d2ff !important;
+        text-shadow: 0 0 10px rgba(0, 210, 255, 0.6);
       }
       
-      /* الحاوية الرئيسية للمحتوى */
       .main-content {
         max-width: 950px;
         margin: 50px auto;
         padding: 0 40px;
       }
 
-      /* تنسيق العناوين والفقرات بنمط Midnight */
-      h1, h2, h3 {
-        color: #00d2ff; /* جميع العناوين بلون النيون اللامع للثيم الجديد */
-        font-weight: 700;
+      /* إجبار العناوين والفقرات في جميع الصفحات على الالتزام بالتصميم الجديد وهزيمة الأخضر القديم */
+      h1, h2, h3, h1 a, h2 a, h3 a {
+        color: #00d2ff !important; /* القضاء تماماً على اللون الأخضر واجبار النيون */
+        font-weight: 700 !important;
         margin-bottom: 20px;
         margin-top: 40px;
         letter-spacing: -0.5px;
-        text-shadow: 0 0 8px rgba(0, 210, 255, 0.2);
+        text-shadow: 0 0 8px rgba(0, 210, 255, 0.2) !important;
       }
 
-      p {
+      p, li {
         margin-bottom: 25px;
         font-weight: 400;
         font-size: 1.05rem;
         text-align: justify;
-        color: #cbd5e1; /* لون رمادي فاتح مريح للقراءة في الوضع الداكن */
+        color: #cbd5e1 !important; /* لون رمادي فاتح مريح وعصري */
       }
 
       strong {
-        color: #00f2fe;
+        color: #00f2fe !important;
         font-weight: 600;
       }
 
-      /* تنسيق الأزرار الافتراضية بنمط الـ Midnight */
+      /* تنسيق الزر الاحترافي المتوهج */
       .btn {
-        background: linear-gradient(135deg, #0072ff, #00d2ff);
+        background: linear-gradient(135deg, #0072ff, #00d2ff) !important;
         color: white !important;
         padding: 12px 28px;
         border-radius: 25px;
@@ -108,7 +118,7 @@
         font-weight: bold;
         display: inline-block;
         transition: all 0.3s ease;
-        border: none;
+        border: none !important;
         box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
       }
       .btn:hover {
@@ -116,25 +126,24 @@
         box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
       }
       
-      /* الفوتر الموحد بنمط داكن مكمل للثيم */
       .site-footer { 
-        background: #0b0f19; 
+        background: #0b0f19 !important; 
         padding: 40px 20px; 
         text-align: center; 
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-top: 1px solid rgba(0, 210, 255, 0.1) !important;
         width: 100%;
         margin-top: 80px;
       }
       
       .footer-links a { 
         margin: 0 15px; 
-        color: #00d2ff; 
+        color: #00d2ff !important; 
         font-weight: 500; 
         text-decoration: none;
         transition: all 0.3s ease;
       }
       .footer-links a:hover { 
-        color: #ffffff;
+        color: #ffffff !important;
         text-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
       }
     </style>
@@ -160,10 +169,9 @@
         <a href="#" target="_blank">Freelancer</a>
         <a href="#" target="_blank">Upwork</a>
       </div>
-      <p style="margin-top:20px; font-size: 0.9rem; color: #64748b;">&copy; 2026 Mostafa Khamis. Professional Cyber & Web Architect.</p>
+      <p style="margin-top:20px; font-size: 0.9rem; color: #64748b;">&copy; 2026 Mostafa Khamis. Professional Web & Data Solutions.</p>
     </footer>
 
-    <!-- جافا سكريبت لتفعيل مكتبة الأنيميشن الشاملة والتلقائية في كل الصفحات -->
     <script src="https://cloudflare.com" integrity="sha512-A7AYk1fGKX6S2SsHyvkv96C732co95FZL70w24mbFFZ7CRKkYwM24TO2xminBlvTRkB8SSOCTSpam886329MSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script>
