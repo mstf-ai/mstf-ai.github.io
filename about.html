@@ -3,41 +3,68 @@ layout: default
 title: About Me - Mostafa Khamis
 ---
 
-<div class="main-content" style="max-width: 800px; margin: auto; padding: 40px 20px;">
+<div class="main-content" style="max-width: 950px; margin: auto; padding: 40px 20px;">
   
-  <!-- Centered Page Summary -->
-  <header class="page-summary" data-aos="fade-down">
-    <h1 style="color: #159957; text-align: center;">About Me</h1>
-    <p style="text-align: center; font-style: italic;">Where technology meets creativity to build the future of web solutions.</p>
+  <!-- عنوان الصفحة الموسط والأنيق -->
+  <header class="page-summary" data-aos="fade-down" style="text-align: center; margin-bottom: 60px;">
+    <h1 style="color: #159957; font-weight: 700;">About Me</h1>
+    <p style="font-style: italic; color: #7f8c8d;">Where technology meets creativity to build the future of web solutions.</p>
   </header>
 
-  <!-- Professional Bio Section -->
-  <section id="bio">
-    <h2 data-aos="fade-right">Professional Objective</h2>
-    <p data-aos="fade-up">
+  <!-- فقرة الهدف المهني مع تأثير الحركة من اليمين -->
+  <section id="bio" style="margin-bottom: 50px;">
+    <h2 data-aos="fade-right" style="color: #159957; font-weight: 700;">Professional Objective</h2>
+    <p data-aos="fade-up" style="color: #4a5568; text-align: justify;">
       I am a dedicated Full-Stack Developer with a deep interest in Data Science and AI Engineering. 
       My mission is to transform complex technical challenges into seamless, user-centric digital experiences. 
       I strive to bridge the gap between back-end robustness and front-end elegance.
     </p>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2 data-aos="fade-right">Technical & Soft Skills</h2>
-    <h3 data-aos="fade-right" style="color: #1e603d;">Web Development</h3>
-    <p data-aos="fade-up">Expertise in <strong>Django</strong> for secure back-end systems and <strong>React</strong> for interactive user interfaces. I am proficient in modern JavaScript essentials and specialized in building scalable architectures.</p>
+  <!-- قسم المهارات التقنية -->
+  <section id="skills" style="margin-bottom: 50px;">
+    <h2 data-aos="fade-right" style="color: #159957; font-weight: 700; margin-bottom: 30px;">Technical & Soft Skills</h2>
     
-    <h3 data-aos="fade-right" style="color: #1e603d;">Data & AI</h3>
-    <p data-aos="fade-up">Deeply familiar with <strong>Data Science</strong> tracks and <strong>Agentic AI</strong>. I utilize these skills to integrate intelligent insights directly into web platforms.</p>
+    <div style="margin-bottom: 25px;">
+      <h3 data-aos="fade-right" style="color: #1e603d; font-weight: 600; font-size: 1.25rem;">Web Development</h3>
+      <p data-aos="fade-up" style="color: #4a5568;">Expertise in <strong>Django</strong> for secure back-end systems and <strong>React</strong> for interactive user interfaces. I am proficient in modern JavaScript essentials and specialized in building scalable architectures.</p>
+    </div>
     
-    <h3 data-aos="fade-right" style="color: #1e603d;">Soft Skills</h3>
-    <p data-aos="fade-up">Critical thinking, problem-solving, and professional collaboration honed through international networking and high-level training programs.</p>
+    <div style="margin-bottom: 25px;">
+      <h3 data-aos="fade-right" style="color: #1e603d; font-weight: 600; font-size: 1.25rem;">Data & AI</h3>
+      <p data-aos="fade-up" style="color: #4a5568;">Deeply familiar with <strong>Data Science</strong> tracks and <strong>Agentic AI</strong>. I utilize these skills to integrate intelligent insights directly into web platforms.</p>
+    </div>
+    
+    <div style="margin-bottom: 25px;">
+      <h3 data-aos="fade-right" style="color: #1e603d; font-weight: 600; font-size: 1.25rem;">Soft Skills</h3>
+      <p data-aos="fade-up" style="color: #4a5568;">Critical thinking, problem-solving, and professional collaboration honed through international networking and high-level training programs.</p>
+    </div>
   </section>
 
-  <!-- The Animated Resume Bar -->
-  <div class="resume-bar" data-aos="zoom-in" style="text-align:center; padding: 30px; background: #e9f5ef; border-radius: 50px; margin-top: 80px; border: 1px solid #159957;">
-    <p style="margin-bottom: 15px; font-weight: bold;">Want to see my full professional journey?</p>
-    <a href="path-to-your-resume.pdf" class="btn" style="background-color: #159957; color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none;">Download My Resume</a>
+  <!-- شريط السيرة الذاتية العائم والمتحرك قبل الفوتر -->
+  <div class="resume-bar" data-aos="zoom-in" style="text-align:center; padding: 30px; background: #e9f5ef; border-radius: 50px; margin-top: 80px; border: 1px solid #159957; box-shadow: 0 4px 15px rgba(21, 153, 87, 0.15);">
+    <p style="margin-bottom: 15px; font-weight: bold; color: #2c3e50;">Want to see my full professional journey?</p>
+    <a href="path-to-your-resume.pdf" class="btn" style="background-color: #159957; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; transition: all 0.3s ease;">Download My Resume</a>
   </div>
 
 </div>
+
+<!-- كود جافا سكريبت الإجباري المباشر لضمان تشغيل الحركة على هذه الصفحة فوراً -->
+<script>
+  function initAOSOnPage() {
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true
+      });
+      // إجبار المكتبة على إعادة حساب أماكن العناصر بعد تحميل محتوى الكود
+      AOS.refresh();
+    } else {
+      // إعادة المحاولة بعد 100 ملي ثانية في حال تأخر تحميل السكربت الرئيسي
+      setTimeout(initAOSOnPage, 100);
+    }
+  }
+  // تشغيل الوظيفة فوراً
+  initAOSOnPage();
+</script>
