@@ -49,22 +49,3 @@ title: About Me - Mostafa Khamis
 
 </div>
 
-<!-- كود جافا سكريبت الإجباري المباشر لضمان تشغيل الحركة على هذه الصفحة فوراً -->
-<script>
-  function initAOSOnPage() {
-    if (typeof AOS !== 'undefined') {
-      AOS.init({
-        duration: 1000,
-        once: false,
-        mirror: true
-      });
-      // إجبار المكتبة على إعادة حساب أماكن العناصر بعد تحميل محتوى الكود
-      AOS.refresh();
-    } else {
-      // إعادة المحاولة بعد 100 ملي ثانية في حال تأخر تحميل السكربت الرئيسي
-      setTimeout(initAOSOnPage, 100);
-    }
-  }
-  // تشغيل الوظيفة فوراً
-  initAOSOnPage();
-</script>
