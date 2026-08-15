@@ -2,50 +2,130 @@
 layout: default
 ---
 
-<!-- قسم الهيرو الموسط بالكامل -->
-<section class="main-article" style="text-align: center; background: url('assets/gif/mockup1.gif') no-repeat center; opacity: 75%; background-size: cover; padding: 120px 20px; color: #333; width: 100%;">
-  <div class="container" style="max-width: 1140px; margin: 0 auto;" data-aos="zoom-in">
-    <h1 style="font-size: 3rem; margin-bottom: 20px; opacity: 100%;">Transforming Ideas into Digital Reality</h1>
-    <p style="font-size: 1.2rem; font-weight: 400; max-width: 800px; margin: 0 auto; opacity: 100%;">Full-Stack Web Development | Data Science | AI Engineering</p>
+<style>
+  /* 1. إعداد مسرح الهيرو الثلاثي الأبعاد لتطبيق الطبقات العازلة */
+  .main-article-hero {
+    position: relative;
+    text-align: center;
+    /* استدعاء مسار الـ GIF الخاص بك هنا */
+    background: url('assets/gif/mockup1.gif') no-repeat center;
+    background-size: cover;
+    padding: 140px 20px;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* 2. قناع اللوح الزجاجي الداكن: يخفض سطوع الـ GIF بنسبة 65% دون المساس بالنصوص */
+  .main-article-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(15, 23, 42, 0.65); /* تحكم في العتمة من هنا */
+    z-index: 1; /* الطبقة السفلية الحاضنة للفيديو */
+  }
+
+  /* 3. حاوية النصوص: نرفعها فوق اللوح الزجاجي لتبدو حادة وساطعة بنسبة 100% */
+  .hero-container {
+    position: relative;
+    z-index: 2; /* الطبقة العلوية المضيئة فوق القناع */
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  /* تنسيق نصوص الهيرو لضمان التباين الفاخر والقراءة المريحة */
+  .hero-container h1 {
+    font-size: 3rem !important;
+    color: #00d2ff !important; /* لون أزرق نيون مطابق لثيم Midnight */
+    margin-bottom: 20px !important;
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.5) !important;
+    font-weight: 700;
+  }
+
+  .hero-container p {
+    font-size: 1.25rem !important;
+    color: #ffffff !important; /* لون أبيض ناصع ومشرق للفقرات الترحيبية */
+    max-width: 800px;
+    margin: 0 auto !important;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8) !important;
+    text-align: center !important;
+  }
+
+  /* تنسيق بطاقات المعاينة لتتوافق مع الوضع الداكن والنيون للموقع */
+  .home-card {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    width: 280px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  .home-card:hover {
+    transform: translateY(-5px);
+    border-color: #00d2ff;
+    box-shadow: 0 8px 25px rgba(0, 210, 255, 0.25);
+  }
+  .home-card img {
+    width: 100%; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 15px;
+  }
+</style>
+
+<!-- قسم الهيرو المعدل والمحمي برمجياً من مشاكل الشفافية والتوريث -->
+<section class="main-article-hero">
+  <div class="hero-container" data-aos="zoom-in">
+    <h1>Transforming Ideas into Digital Reality</h1>
+    <p>Full-Stack Web Development | Data Science | AI Engineering</p>
   </div>
 </section>
 
-
+<!-- المحتوى الرئيسي للموقع -->
 <div class="main-content" style="max-width: 1000px; margin: auto; padding: 0 20px;">
   
   <!-- About Me Preview -->
-  <section id="home-about" style="text-align: center;">
+  <section id="home-about" style="text-align: center; padding: 60px 0;">
     <h2 data-aos="fade-up">About Me</h2>
-    <p data-aos="fade-up">I am a passionate developer specializing in building scalable web applications and data-driven insights. My goal is to bridge the gap between complex data and intuitive user experiences.</p>
+    <p data-aos="fade-up" style="text-align: center;">I am a passionate developer specializing in building scalable web applications and data-driven insights. My goal is to bridge the gap between complex data and intuitive user experiences.</p>
     <a href="/about" class="btn" data-aos="fade-up">View More</a>
   </section>
 
   <!-- Portfolio Preview (Card Style) -->
-  <section id="home-portfolio">
+  <section id="home-portfolio" style="padding: 60px 0;">
     <h2 style="text-align: center;" data-aos="fade-up">Featured Portfolio</h2>
-    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-      <!-- Demo Card 1 -->
-      <div class="card" data-aos="flip-left" style="width: 280px; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
-        <img src="https://placeholder.com" alt="Project 1" style="width:100%; border-radius: 5px;">
+    <div style="display: flex; gap: 25px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+      
+      <!-- كارت مشروع 1 -->
+      <div class="home-card" data-aos="flip-left">
+        <img src="https://unsplash.com" alt="Project 1">
         <h3>Project Alpha</h3>
         <p>A sophisticated web solution using Django and React.</p>
       </div>
-      <!-- Demo Card 2 -->
-      <div class="card" data-aos="flip-right" style="width: 280px; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
-        <img src="https://placeholder.com" alt="Project 2" style="width:100%; border-radius: 5px;">
+      
+      <!-- كارت مشروع 2 -->
+      <div class="home-card" data-aos="flip-right">
+        <img src="https://unsplash.com" alt="Project 2">
         <h3>Data Insights</h3>
         <p>AI-powered analytics dashboard for business scaling.</p>
       </div>
+
     </div>
-    <div style="text-align: center; margin-top: 20px;">
+    <div style="text-align: center; margin-top: 35px;">
       <a href="/portfolio" class="btn" data-aos="fade-up">See All Projects</a>
     </div>
   </section>
 
   <!-- Certificates Preview -->
-  <section id="home-certificates" style="text-align: center;">
+  <section id="home-certificates" style="text-align: center; padding: 60px 0;">
     <h2 data-aos="fade-up">Education & Recognition</h2>
-    <p data-aos="fade-up">Certified by industry leaders including ITIDA, Huawei, and ALX Africa.</p>
+    <p data-aos="fade-up" style="text-align: center;">Certified by industry leaders including ITIDA, Huawei, and ALX Africa.</p>
     <a href="/certificates" class="btn" data-aos="fade-up">View More</a>
   </section>
 
