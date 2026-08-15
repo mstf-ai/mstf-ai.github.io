@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     
-    <!-- استدعاء خطوط Google Fonts (الأناقة الفرنسية الهندسية بدون حواف) -->
+    <!-- استدعاء خطوط Google Fonts للأناقة الفرنسية الهندسية بدون حواف -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     
-    <!-- مكتبة الأنيكيشن AOS -->
+    <!-- مكتبة الأنيميشن AOS (CSS) -->
     <link href="https://unpkg.com" rel="stylesheet">
     
     <style>
@@ -23,9 +23,9 @@
 
       body {
         padding-top: 80px; 
-        font-family: 'Montserrat', sans-serif; /* تفعيل الخط الجديد */
+        font-family: 'Montserrat', sans-serif;
         color: #2c3e50;
-        line-height: 1.8; /* إعطاء مساحة مريحة جداً بين الأسطر */
+        line-height: 1.8;
         background-color: #fafafa;
         overflow-x: hidden;
       }
@@ -67,7 +67,7 @@
       
       /* تنسيق الحاوية الرئيسية للمحتوى لمنع الانضغاط */
       .main-content {
-        max-width: 950px; /* زيادة العرض لإعطاء مساحة للمحتوى للانتشار */
+        max-width: 950px;
         margin: 50px auto;
         padding: 0 40px;
       }
@@ -85,7 +85,7 @@
         margin-bottom: 25px;
         font-weight: 400;
         font-size: 1.05rem;
-        text-align: justify; /* توزيع الكلمات بشكل متناسق ومريح للعين */
+        text-align: justify;
         color: #4a5568;
       }
 
@@ -115,9 +115,10 @@
     </style>
   </head>
   <body>
-    
+
+    <!-- شريط التنقل العلوي -->
     <nav class="nav-bar">
-      <div class="logo" style="font-family: 'Georgia', serif; font-size: 1.5rem;">Mostafa Khamis</div>
+      <div class="logo">Mostafa Khamis</div>
       <div class="nav-links">
         <a href="/">Home</a>
         <a href="/portfolio">Portfolio</a>
@@ -126,26 +127,29 @@
       </div>
     </nav>
 
+    <!-- مكان حقن محتويات الصفحات المختلفة تلقائياً -->
     {{ content }}
 
+    <!-- الفوتر الموحد لجميع الصفحات -->
     <footer class="site-footer">
       <div class="footer-links">
-        <a href="#">LinkedIn</a> | <a href="#">GitHub</a> | <a href="#">Freelancer</a> | <a href="#">Upwork</a>
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">Freelancer</a>
+        <a href="#" target="_blank">Upwork</a>
       </div>
-      <p style="margin-top:20px;">&copy; 2026 Mostafa Khamis. Professional Web & Data Solutions.</p>
+      <p style="margin-top:20px; font-size: 0.9rem; color: #7f8c8d;">&copy; 2026 Mostafa Khamis. Professional Web & Data Solutions.</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- <script>AOS.init({ duration: 1000, once: true });</script> -->
-    <!-- AOS Script Initialization -->
-    <!-- <script src="https://unpkg.com"></script> -->
+    <!-- جافا سكريبت لتفعيل مكتبة الأنيميشن AOS قبل إغلاق الـ body -->
+    <script src="https://unpkg.com"></script>
     <script>
-    AOS.init({
-        duration: 900, // Animation speed in milliseconds
-        once: false,    // Set to true if you only want it to animate once
-        mirror: true    // Animates elements again when scrolling past them
-    });
+      // تشغيل الأنيميشن بإعدادات احترافية وسلسة
+      AOS.init({ 
+        duration: 1000, // مدة حركة العنصر بالملي ثانية (ثانية واحدة)
+        once: false,     // اجعلها false لكي يتكرر التحريك كلما صعد ونزل العميل في الصفحة
+        mirror: true    // يضمن تفعيل الحركة أثناء الصعود أيضاً
+      });
     </script>
-
   </body>
 </html>
