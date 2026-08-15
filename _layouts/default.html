@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+      /* Fixed Navigation Bar */
+      .nav-bar {
+        position: fixed; top: 0; width: 100%; background: #159957; 
+        z-index: 1000; padding: 10px 50px; display: flex; 
+        justify-content: space-between; align-items: center; color: white;
+      }
+      .nav-links a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; }
+      .nav-links a:hover { color: #1e603d; }
+      
+      /* Footer Styling */
+      .site-footer { background: #f4f4f4; padding: 40px; text-align: center; border-top: 1px solid #ddd; }
+      .footer-links a { margin: 0 10px; color: #159957; font-weight: bold; }
+
+      /* Global Spacing */
+      body { padding-top: 60px; }
+      section { padding: 60px 0; border-bottom: 1px solid #eee; }
+    </style>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="logo" style="font-family: 'Georgia', serif; font-size: 1.5rem;">Mostafa Khamis</div>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/about">About Me</a>
+        <a href="/certificates">Certificates</a>
+      </div>
+    </nav>
+
+    {{ content }}
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="#">LinkedIn</a> | <a href="#">GitHub</a> | <a href="#">Freelancer</a> | <a href="#">Upwork</a>
+      </div>
+      <p style="margin-top:20px;">&copy; 2026 Mostafa Khamis. Professional Web & Data Solutions.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+  </body>
+</html>

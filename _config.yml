@@ -1,6 +1,12 @@
-# theme: jekyll-theme-cayman
+title: Mostafa Khamis
+description: Full-Stack Developer & Data Science Enthusiast
 remote_theme: pages-themes/cayman@v0.2.0
-plugins: 
-  - jekyll-remote-cayman
-title: Mostafas's homepage
-description: Bookmark this to keep an eye on my project updates!
+plugins:
+  - jekyll-remote-theme
+
+# Navigation links for your header/footer
+nav_links:
+  - { title: "Home", url: "/" }
+  - { title: "Portfolio", url: "/portfolio" }
+  - { title: "About Me", url: "/about" }
+  - { title: "Certificates", url: "/certificates" }
