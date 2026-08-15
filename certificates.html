@@ -1,0 +1,138 @@
+---
+layout: default
+title: Certificates & Experience - Mostafa Khamis
+---
+
+<style>
+  /* تأثير الطفو الفضائي المستمر للبطاقات */
+  @keyframes spaceFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* تنسيق بطاقة الشهادة الضخمة (80%) والتوهج الخلفي */
+  .large-cert-card {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    background: #1e293b;
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
+    animation: spaceFloat 5s ease-in-out infinite;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .large-cert-card:hover {
+    box-shadow: 0 0 35px rgba(0, 210, 255, 0.35);
+  }
+
+  /* تنسيق الصورة العالية الجودة بداخل البطاقة */
+  .cert-media {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  /* تنسيق القائمة المنسدلة للتفاصيل */
+  .cert-toggle {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: #cbd5e1;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  .cert-toggle summary {
+    font-weight: 500;
+    color: #00d2ff;
+    outline: none;
+  }
+
+  .cert-toggle p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: #94a3b8;
+  }
+
+  /* خط الفصل الأنيق المتوافق مع الثيم */
+  .midnight-hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #00d2ff, transparent);
+    margin: 60px auto;
+    width: 90%;
+  }
+</style>
+
+<div class="main-content">
+  
+  <!-- عنوان الصفحة الموسط -->
+  <header style="text-align: center; margin-bottom: 50px;" data-aos="fade-down">
+    <h1 style="font-size: 2.5rem;">Certificates & Badges</h1>
+    <p style="color: #64748b; font-style: italic;">A showcase of professional recognitions and verified expertise.</p>
+  </header>
+
+  <!-- قسم الشهادات -->
+  <section id="certificates-gallery">
+    
+    <!-- الشهادة الأولى (تجريبية) -->
+    <div class="large-cert-card" data-aos="fade-up">
+      <img src="https://placeholder.com" alt="Certificate Demo" class="cert-media">
+      <details class="cert-toggle">
+        <summary>View Skills acquired & Program details</summary>
+        <p>
+          <strong>Program:</strong> Advanced Data Science and Web Intelligence Training.<br>
+          <strong>Skills:</strong> Full-stack architecture integration, machine learning pipeline deployments, and advanced data visualization models.
+        </p>
+      </details>
+    </div>
+
+    <!-- الشهادة الثانية (تجريبية) -->
+    <div class="large-cert-card" data-aos="fade-up" style="animation-delay: 1s;">
+      <img src="https://placeholder.com" alt="Certificate Demo" class="cert-media">
+      <details class="cert-toggle">
+        <summary>View Competition achievements</summary>
+        <p>
+          <strong>Event:</strong> International AI & Web Development Hackathon.<br>
+          <strong>Role:</strong> Lead Backend Engineer designing highly secure Django REST APIs capable of processing real-time system metrics.
+        </p>
+      </details>
+    </div>
+
+  </section>
+
+  <!-- خط الفصل السحري للثيم -->
+  <hr class="midnight-hr">
+
+  <!-- قسم الخبرات العملية السابقة (مفرود بدون بطاقات مثل عني) -->
+  <section id="work-experience" style="padding-bottom: 40px;">
+    <div style="text-align: center; margin-bottom: 40px;" data-aos="fade-down">
+      <h2 style="font-size: 2.2rem;">Professional Work Experience</h2>
+      <p style="color: #64748b; font-style: italic;">Past corporate positions and technical development roles.</p>
+    </div>
+
+    <!-- شركة 1 -->
+    <div style="margin-bottom: 40px;" data-aos="fade-right">
+      <h3 style="color: #00f2fe; margin-top: 20px;">Full-Stack Web Architect — Tech Solutions Corp</h3>
+      <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 10px;"><em>January 2024 — Present</em></p>
+      <p>Led a team of developers in constructing secure backend systems using Python and Django. Implemented efficient database management logic and optimized response speeds by 40% for multi-user business software.</p>
+    </div>
+
+    <!-- شركة 2 -->
+    <div style="margin-bottom: 40px;" data-aos="fade-right">
+      <h3 style="color: #00f2fe; margin-top: 20px;">Data Software Specialist — Innovate AI Labs</h3>
+      <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 10px;"><em>March 2022 — December 2023</em></p>
+      <p>Developed interactive web dashboards using responsive React frameworks. Specialized in connecting complex machine learning prediction models directly to consumer-facing analytics systems.</p>
+    </div>
+
+  </section>
+</div>
