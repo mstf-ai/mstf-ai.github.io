@@ -87,6 +87,109 @@ layout: default
   </div>
 </section>
 
+<!-- ---
+layout: default
+--- -->
+
+<style>
+  /* 1. إعداد مسرح الهيرو الثلاثي الأبعاد لتطبيق الطبقات العازلة */
+  .main-article-hero {
+    position: relative;
+    text-align: center;
+    /* استدعاء مسار الـ GIF الخاص بك هنا */
+    background: url('assets/gif/mockup1.gif') no-repeat center;
+    background-size: cover;
+    padding: 140px 20px;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* 2. قناع اللوح الزجاجي الداكن: يخفض سطوع الـ GIF بنسبة 65% دون المساس بالنصوص */
+  .main-article-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(15, 23, 42, 0.65); /* تحكم في العتمة من هنا */
+    z-index: 1; /* الطبقة السفلية الحاضنة للفيديو */
+  }
+
+  /* 3. حاوية النصوص: نرفعها فوق اللوح الزجاجي لتبدو حادة وساطعة بنسبة 100% */
+  .hero-container {
+    position: relative;
+    z-index: 2; /* الطبقة العلوية المضيئة فوق القناع */
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  /* تنسيق نصوص الهيرو لضمان التباين الفاخر والقراءة المريحة */
+  .hero-container h1 {
+    font-size: 3rem !important;
+    color: #00d2ff !important; /* لون أزرق نيون مطابق لثيم Midnight */
+    margin-bottom: 20px !important;
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.5) !important;
+    font-weight: 700;
+  }
+
+  .hero-container p {
+    font-size: 1.25rem !important;
+    color: #ffffff !important; /* لون أبيض ناصع ومشرق للفقرات الترحيبية */
+    max-width: 800px;
+    margin: 0 auto !important;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8) !important;
+    text-align: center !important;
+  }
+
+  /* تنسيق بطاقات المعاينة لتتوافق مع الوضع الداكن والنيون للموقع */
+  .home-card {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    width: 280px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    text-decoration: none; /* لمنع ظهور خطوط تحت النصوص لأن الكارت أصبح رابطاً */
+    color: #e0e6ed;
+  }
+  .home-card:hover {
+    transform: translateY(-5px);
+    border-color: #00d2ff;
+    box-shadow: 0 8px 25px rgba(0, 210, 255, 0.25);
+  }
+  .home-card h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #00d2ff;
+  }
+  .home-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #94a3b8;
+    margin-bottom: 0;
+  }
+  .home-card img {
+    width: 100%; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 15px;
+  }
+</style>
+
+<!-- قسم الهيرو المعدل والمحمي برمجياً من مشاكل الشفافية والتوريث -->
+<section class="main-article-hero">
+  <div class="hero-container" data-aos="zoom-in">
+    <h1>Transforming Ideas into Digital Reality</h1>
+    <p>Full-Stack Web Development | Data Science | AI Engineering</p>
+  </div>
+</section>
+
 <!-- المحتوى الرئيسي للموقع -->
 <div class="main-content" style="max-width: 1000px; margin: auto; padding: 0 20px;">
   
@@ -102,19 +205,19 @@ layout: default
     <h2 style="text-align: center;" data-aos="fade-up">Featured Portfolio</h2>
     <div style="display: flex; gap: 25px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
       
-      <!-- كارت مشروع 1 -->
-      <div class="home-card" data-aos="flip-left">
-        <img src="assets/img/Sai.jpg" alt="Project 1">
-        <h3>Project Alpha</h3>
-        <p>A sophisticated web solution using Django and React.</p>
-      </div>
+      <!-- كارت مشروع 1: تم تحديثه ليعرض واجهة الـ Flexbox Showcase المرفوع على Google Sites -->
+      <a href="https://sites.google.com/view/flexbox-showcase-mk/" target="_blank" class="home-card" data-aos="flip-left">
+        <img src="assets/img/flexbox-screenshot.png" alt="CSS Flexbox Applications Showcase">
+        <h3>CSS Flexbox Showcase</h3>
+        <p>An interactive frontend showcase detailing the essential CSS Flexbox properties without backend processing.</p>
+      </a>
       
       <!-- كارت مشروع 2 -->
-      <div class="home-card" data-aos="flip-right">
+      <a href="/portfolio" class="home-card" data-aos="flip-right">
         <img src="assets/img/How-to-look-good-in-photos.jpg" alt="Project 2">
-        <h3>Data Insights</h3>
-        <p>AI-powered analytics dashboard for business scaling.</p>
-      </div>
+        <h3>More Projects</h3>
+        <p>Browse full applications prototypes and data-driven client solutions.</p>
+      </a>
 
     </div>
     <div style="text-align: center; margin-top: 35px;">
@@ -130,3 +233,4 @@ layout: default
   </section>
 
 </div>
+
